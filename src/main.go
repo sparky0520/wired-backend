@@ -8,7 +8,10 @@ import (
 func main() {
 	app := pocketbase.New()
 
+	// authMiddleware := middleware.AuthMiddleware()
+
 	app.OnServe().BindFunc(func(se *core.ServeEvent) error {
-		return se.Next()
+		return nil
 	})
+
 }
